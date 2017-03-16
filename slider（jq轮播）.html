@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播</title>
+		<style>
+			*{
+				padding:0;
+				margin:0;
+			}
+			#banner{
+				width:640px;
+				height:480px;
+				position: relative;
+				margin:100px auto;
+				overflow: hidden;
+			}
+			#banner .inner{
+				position: absolute;
+				left:0;
+				top:0;
+			}
+			#banner .inner img{
+				float:left;
+			}
+			#banner ul{
+				position: absolute;
+				right:20px;
+				bottom:20px;
+			}
+			#banner ul li{
+				list-style: none;
+				float:left;
+				width:110px;
+				height:70px;
+				margin-left:10px;
+				border:1px solid #fff;
+				/*opacity: 0.3;*/
+			}
+			#banner ul .active{
+				border:1px solid red;
+			}			
+			#banner ul li img{
+				float:left;
+				width:110px;
+				height:70px;
+				
+			}
+			#banner a{
+				text-decoration: none;
+				color:#fff;
+				position: absolute;
+				top:50%;
+				transform: translateY(-50%);
+				width:40px;
+				height:70px;
+				background:#ccc;
+				font-size:50px;
+				text-align: center;
+				line-height:65px;
+				opacity: 0.3;
+			}
+			#banner a:hover{
+				opacity: 1;
+			}
+			#banner .leftbtn{
+				left:0;
+			}
+			#banner .rightbtn{
+				right:0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="banner">
+			<div class="inner">
+				<img src="img/01.jpg"/>
+				<img src="img/02.jpg"/>
+				<img src="img/03.jpg"/>
+				<img src="img/04.jpg"/>
+				<img src="img/05.jpg"/>
+				<!--<img src="img/01.jpg"/>-->
+			</div>
+			<ul class="oul">
+				<li class="active"><img src="img/01.jpg"/></li>
+				<li><img src="img/02.jpg"/></li>
+				<li><img src="img/03.jpg"/></li>
+				<li><img src="img/04.jpg"/></li>
+				<li><img src="img/05.jpg"/></li>
+			</ul>
+			<a href="javascript:;" class="leftbtn">&lt;</a>
+			<a href="javascript:;" class="rightbtn">&gt;</a>
+		</div>
+		<script src="js/jquery-3.1.1.js"></script>
+		<script>										
+			var oneIndex = 0;//全局变量
+				imgLen = $('.inner img').length;//图片总数
+			function move(){
+				if(oneIndex<imgLen-1){
+					oneIndex++;
+				}
+				else{
+					oneIndex = 0;
+				}
+				changeTo(oneIndex);
+				
+			}
+			var autoChange = setInterval(move,1000);
+			
+//			$('oul').find('li').each(function(item){
+//				$(this).hover(function(){
+//					clearInterval(autoChange);
+//					changeTo(item);
+//					oneIndex = item;					
+//				},function(){
+//					autoChangeAgain();
+//				})
+//			})		
+			
+			
+			//清除定时器时候的重置定时器--封装
+//			function autoChangeAgain(){
+//				autoChange = setInterval(function(){
+//					if(oneIndex<imgLen-1){
+//						oneIndex++;
+//					}
+//					else{
+//						oneIndex = 0;
+//					}
+//					changeTo(oneIndex);
+//				},3000);
+//			}
+			
+			function changeTo(num){ 
+				$(".inner img").hide();		    
+			    $(".oul").find("li").removeClass("active").eq(num).addClass("active");
+				$(".inner img:eq("+num+")").fadeIn(1000);
+		    }
+			
+		</script>
+	</body>
+</html>
