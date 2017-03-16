@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+//    var arr=[6,2,1,4,8,34,86];
+    //  =====* js数组排序  *========
+//    function number_sort(a,b)
+//    {
+//        return a - b
+//    }
+//    console.log(arr.sort(number_sort));
+    //=====*   js数组去重  *========
+//    var arr=[6,2,2,1,1,1,4,8,34,34,34,86];
+//    for(var i=0;i<arr.length;i++){
+//        for(var j=i+1;j<arr.length;j++){
+//            if(arr[i]==arr[j]){
+//                arr.splice(j,1);
+//                j--
+//            }
+//        }
+//    }
+//    console.log(arr);
+//=====*   原型上添加方法  *========
+//           排序
+//var arr=[6,2,1,4,8,34,86];
+//Array.prototype.new_sort= function(){
+//    function number_sort(a,b) {
+//        return a - b;
+//    }
+//    this.sort(number_sort);
+//    return this;
+//};
+//           最大数
+//var arr=[6,2,1,4,8,34,86];
+//Array.prototype.max_number= function(){
+//    var max=this[0];
+//        for(var i=0;i<this.length;i++){
+//            if(this[i]>max){
+//                max=this[i];
+//            }
+//        }
+//    return max;
+//};
+//console.log(arr.max_number());
+//           arguments  任意数相乘
+//    function cheng(){
+//        var v=1;
+//        for(var i=0;i<arguments.length;i++){
+//            v*=arguments[i];
+//        }
+//        return v;
+//    }
+//    alert( cheng(4,5,2,2));
+</script>
+<!--//=============================================================================================================================-->
+<!--========* 添加课程 *==============-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #MyDiv {
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        #aBtn {
+            width: 200px;
+            height: 50px;
+        }
+        li {
+            width: 100%;
+            height: 30px;
+            border-bottom: 1px solid #000;
+            position: relative;
+            line-height: 30px;
+            color: #000;
+            font-size: 20px;
+        }
+        li button {
+            position: absolute;
+            right:0;
+            width: 50px;
+            height: 30px;
+        }
+    </style>
+    <script src="./js/jquery-3.1.1.js"></script>
+</head>
+<body>
+<div id="MyDiv">
+    <button id="aBtn">添加课程</button>
+    <ul>
+    </ul>
+</div>
+</body>
+<script>
+    var Text = ["javascripit课程", "css课程", "php课程", "c++课程", "java课程", ".net"];
+    $('#aBtn').click(function(){
+        $('ul').append('<li>'+Text[Math.floor(Math.random()*Text.length)]+"<button class='btn'>删除</button>"+'</li>');
+        $('ul li:last-child').css('background',getColor);
+        $('.btn').click(function(){
+            $(this).parent().remove();
+        });
+    });
+    function getColor() {
+        return "#" + Math.floor(Math.random() * Math.pow(16, 6)).toString(16);
+    }
+</script>
+</html>
