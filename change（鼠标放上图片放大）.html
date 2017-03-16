@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>鼠标放上图片放大</title>
+		<style>
+			*{
+				padding:0;
+				margin:0;
+			}
+			#wrap{
+				width:540px;
+				height:150px;
+				border:1px solid #ccc;
+				margin:100px auto;
+				position: relative;
+			}
+			#wrap ul{
+				position: absolute;
+				left:0;
+				top:0;
+			}
+			#wrap ul li{
+				width:100px;
+				height:150px;
+				list-style: none;
+				float:left;
+				margin-left:7px;
+			}
+			#wrap ul li img{
+				width:100px;
+				height:150px;
+				float:left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<ul>
+				<li><img src="img/01.jpg" alt="" /></li>
+				<li><img src="img/02.jpg" alt="" /></li>
+				<li><img src="img/03.jpg" alt="" /></li>
+				<li><img src="img/04.jpg" alt="" /></li>
+				<li><img src="img/05.jpg" alt="" /></li>
+			</ul>
+		</div>
+		<script src="js/jquery-3.1.1.js"></script>
+		<script>
+			$(function(){
+				$('ul li').bind('mouseover',function(){
+					
+				})
+			})
+		</script>
+	</body>
+</html>
