@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>黄历</title>
+		<link rel="stylesheet" href="css/almanac.css" />
+		<!--<script src="js/almanac.js"></script>-->
+	</head>
+	<body>
+		<div class="wrap">
+			<p>程序员老黄历<span>beta</span></p>
+		</div>
+		<div class="date" id="odiv"></div>
+		<div class="content">
+			<div class="content-top">
+				<div class="content-top-left">
+					<p>宜</p>
+				</div>
+				<div class="content-top-right">
+					<p></p>
+					<p></p>
+					<p></p>
+				</div>
+			</div>
+			<div class="content-bottom">
+				<div class="content-bottom-left">
+					<p>不宜</p>
+				</div>
+				<div class="content-bottom-right">
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+				</div>
+			</div>
+		</div>
+		<div class="article">
+			<p></p>
+			<p></p>
+			<p></p>
+		</div>
+		<div class="btn">相求签?</div>	
+		<div class="footer">
+			<ul class="oul">								
+			</ul>
+		</div>
+		<script src="js/jquery-3.1.1.js"></script>
+		<script>
+			$(function(){
+				var info;
+				$.ajax({
+					type:"get",
+					url:"js/data.json",
+					async:true,
+					success:function(date1){
+//						console.log(date);
+						info = date1;
+						$.each(info.should, function(m,n) {
+//							console.log(n);
+							var str = "<p>"+n+"</p>";
+							$(".content-top-right").append(str);
+						});
+						$.each(info.inadvisable, function(a,b) {
+							var arr = "<p>"+b+"</p>";
+							$(".content-bottom-right").append(arr);
+						});
+						$.each(info.article, function(x,m) {
+							var str = "<p>"+m+"</p>";
+							$(".article").append(str);
+						});
+						$.each(info.footer, function(i,j) {
+							var str = "<li>"+j+"</li>";
+							$(".oul").append(str);
+						});
+					}
+				});
+			})
+		
+		
+		
+		
+		
+		
+		
+			function myTimer(){
+				var date = new Date();
+				//console.log(date);
+				var year = date.getFullYear();
+				//console.log(year);
+				var month = date.getMonth()+1;
+				var day = date.getDate();
+				var mywek = '日一二三四五六';	
+				var wektime = date.getDay();
+				var week = mywek.charAt(wektime);
+				return '今天是'+year+'年'+month+'月'+day+'月'+' '+'星期'+week;
+			//	console.log(str);
+			}
+			//myTimer();
+			var odiv = document.getElementById('odiv');
+			odiv.innerHTML = myTimer();
+			window.setInterval(function(){
+				odiv.innerHTML = myTimer();
+			},1000);
+		</script>
+	</body>
+</html>
