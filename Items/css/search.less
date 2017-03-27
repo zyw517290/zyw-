@@ -1,0 +1,107 @@
+@import url('reset.css');
+.full{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+.whb(@w;@h;@b){
+    width:@w;
+    height:@h;
+    background:@b;
+}
+.box(@dir:row){
+    display:flex;
+    flex-direction: @dir;
+}
+html,body,.wrap{
+    .full;
+}
+.wrap{
+    .box(column);
+}
+.header{
+    .whb(100%;4.4rem;#323333);
+    .box;
+    a{
+        width:17px;
+        height:24px;
+        background-image: url(../img/icon.png);
+        background-repeat: no-repeat;
+        background-position: -100px -50px;
+        margin-top:15px;
+        margin-left:30px;
+       
+    }
+    p{
+        flex:1;
+        margin-top:15px;  
+        text-align: center;  
+        position: relative;                         
+        .int{
+             
+            background-color:#323333;
+            border:1px solid #726966;
+            width:295px;
+            height:26px;            
+        }
+        span{           
+            width:22px;
+            height:22px;
+            position: absolute;
+            right:40%;
+            bottom:13px;
+            background-image: url(../img/icon.png);
+            background-repeat: no-repeat;
+            background-position: 0 -99px;
+        }
+    }
+    b{
+         width:17px;
+        height:24px;
+//      margin-left:50%;
+    }
+}
+.main{
+    flex:1;
+    overflow-y: auto;
+    position: relative;
+    .picture{
+        .whb(100%;429px;null);
+        margin:0 auto;
+        p{
+            img{
+                .full;
+            }
+        }
+    }
+    .sheet{
+        .whb(100%;500px;null);
+        position: absolute;
+        left:0;
+        top:100px;
+//      opacity: 0.4;
+        display:none;
+        .box(column);
+        ul{
+            .whb(100%;7%;null);
+            flex:1;
+            .box;            
+            li{  
+                flex:1;             
+                border-bottom:1px solid #515151;
+                border-left:1px solid #515151;
+                color:#f00;
+                font-size:14px;
+                text-align: center;
+                line-height:60px;
+            }
+        }
+        h2{
+            font-size:18px;
+            text-align: center;
+            line-height:120px;
+            height:14%;
+            color:#f00;
+        }    
+    }
+}

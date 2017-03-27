@@ -1,0 +1,241 @@
+@import url('reset.css');
+.full {
+  width: 100%;
+  height: 100%;
+}
+.header {
+  width: 1024px;
+  height: 44px;
+  background: #323333;
+  margin: 0 auto;
+}
+.header .p1 {
+  float: left;
+  width: 12px;
+  height: 22px;
+  margin-left: 30px;
+  margin-top: 12px;
+  background-image: url(../img/icon.png);
+  background-repeat: no-repeat;
+  background-position: -50px -301px;
+}
+.header .p2 {
+  float: left;
+  width: 45px;
+  height: 44px;
+  line-height: 44px;
+  color: #fff;
+  font-size: 15px;
+  margin-left: 45%;
+}
+.header .p3 {
+  float: right;
+  width: 130px;
+  height: 44px;
+}
+.header .p3 span {
+  float: left;
+  margin-right: 40px;
+  width: 25px;
+  height: 24px;
+  background-image: url(../img/icon.png);
+  background-repeat: no-repeat;
+  background-position: 0 -50px;
+  margin-top: 12px;
+}
+.header .p3 b {
+  float: left;
+  width: 22px;
+  height: 24px;
+  background-image: url(../img/icon.png);
+  background-repeat: no-repeat;
+  background-position: -100px -100px;
+  margin-top: 12px;
+}
+.main {
+  width: 1024px;
+  height: 258px;
+  background: null;
+  margin: 0 auto;
+  border-bottom: 7px solid #dbdbdc;
+}
+.main h4 {
+  margin-bottom: 15px;
+}
+.main p {
+  width: 40px;
+  height: 20px;
+  line-height: 20px;
+  margin: 0 auto;
+}
+.main ul {
+  width: 250px;
+  height: 25px;
+  margin: 0 auto;
+}
+.main ul li {
+  float: left;
+  margin-right: 25px;
+  line-height: 25px;
+}
+.footer {
+  width: 1024px;
+  height: 422px;
+  background: null;
+  margin: 0 auto;
+}
+.footer .footer-one {
+  width: 1024px;
+  height: 60px;
+  background: null;
+  border-bottom: 1px solid #efefef;
+  margin-top: 2px;
+  cursor: pointer;
+  letter-spacing: 3px;
+}
+.footer .footer-one .p1 {
+  float: left;
+  line-height: 60px;
+  font-size: 13px;
+  margin-left: 15px;
+}
+.footer .footer-one .p2 {
+  float: right;
+  line-height: 60px;
+  font-size: 13px;
+  margin-right: 18px;
+}
+.footer .footer-one .p2 span {
+  float: right;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 20px;
+  height: 22px;
+  background-image: url(../img/icon.png);
+  background-repeat: no-repeat;
+  background-position: -100px -300px;
+}
+.footer .footer-one:hover {
+  background: #efefef;
+  color: #FF0000;
+}
+.footer .footer-two {
+  width: 1024px;
+  height: 80px;
+  background: null;
+  border-bottom: 1px solid #efefef;
+  letter-spacing: 3px;
+}
+.footer .footer-two dl {
+  float: left;
+  margin-top: 15px;
+}
+.footer .footer-two dl dt {
+  width: 35px;
+  height: 33px;
+  background-image: url(../img/icon.png);
+  background-repeat: no-repeat;
+}
+.footer .footer-two dl dd {
+  text-align: center;
+  margin-top: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.footer .footer-two dl dd:hover {
+  color: yellow;
+}
+.footer .footer-two dl .dd1 {
+  margin-left: 60px;
+  margin-right: 70px;
+}
+.footer .footer-two dl .dt1:hover {
+  margin-left: 60px;
+  background-position: -53px -648px;
+  transition: background-position 0.2s linear;
+}
+.footer .footer-two dl .dt1 {
+  margin-left: 60px;
+  background-position: 0 -648px;
+}
+.footer .footer-two dl .dt2:hover {
+  margin-left: 70px;
+  background-position: -150px -648px;
+  transition: background-position 0.2s linear;
+}
+.footer .footer-two dl .dt2 {
+  margin-left: 70px;
+  margin-right: 70px;
+  background-position: -98px -648px;
+}
+.footer .footer-two dl .dt3:hover {
+  margin-left: 70px;
+  background-position: -50px -698px;
+  transition: background-position 0.2s linear;
+}
+.footer .footer-two dl .dt3 {
+  margin-left: 70px;
+  margin-right: 70px;
+  background-position: 0 -698px;
+}
+.footer .footer-two dl .dt4:hover {
+  margin-left: 70px;
+  margin-right: 70px;
+  background-position: -148px -698px;
+  transition: background-position 0.2s linear;
+}
+.footer .footer-two dl .dt4 {
+  margin-left: 70px;
+  margin-right: 70px;
+  background-position: -98px -698px;
+}
+.footer .footer-two dl .dt5:hover {
+  margin-left: 70px;
+  margin-right: 70px;
+  background-position: -50px -750px;
+  transition: background-position 0.2s linear;
+}
+.footer .footer-two dl .dt5 {
+  margin-left: 70px;
+  margin-right: 70px;
+  background-position: 0 -750px;
+}
+.footer .footer-two dl .dt6:hover {
+  margin-left: 70px;
+  background-position: -147px -750px;
+  transition: background-position 0.2s linear;
+}
+.footer .footer-two dl .dt6 {
+  margin-left: 70px;
+  background-position: -98px -750px;
+}
+.footer .footer-two dl .dd3 {
+  margin-left: 70px;
+}
+.footer .footer-three {
+  width: 1024px;
+  height: 280px;
+  background: null;
+  letter-spacing: 3px;
+}
+.footer .footer-three ul span {
+  float: right;
+  width: 20px;
+  height: 22px;
+  background-image: url(../img/icon.png);
+  background-repeat: no-repeat;
+  background-position: -100px -300px;
+  margin-top: 15px;
+  margin-right: 18px;
+}
+.footer .footer-three ul li {
+  line-height: 55px;
+  border-bottom: 1px solid #efefef;
+  padding-left: 18px;
+}
+.footer .footer-three ul li a {
+  font-size: 14px;
+}
+.footer .footer-three ul li:hover {
+  background: #efefef;
+}

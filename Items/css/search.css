@@ -1,0 +1,110 @@
+@import url('reset.css');
+.full {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  width: 100%;
+  height: 4.4rem;
+  background: #323333;
+  display: flex;
+  flex-direction: row;
+}
+.header a {
+  width: 17px;
+  height: 24px;
+  background-image: url(../img/icon.png);
+  background-repeat: no-repeat;
+  background-position: -100px -50px;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+.header p {
+  flex: 1;
+  margin-top: 15px;
+  text-align: center;
+  position: relative;
+}
+.header p .int {
+  background-color: #323333;
+  border: 1px solid #726966;
+  width: 295px;
+  height: 26px;
+}
+.header p span {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right: 40%;
+  bottom: 13px;
+  background-image: url(../img/icon.png);
+  background-repeat: no-repeat;
+  background-position: 0 -99px;
+}
+.header b {
+  width: 17px;
+  height: 24px;
+}
+.main {
+  flex: 1;
+  overflow-y: auto;
+  position: relative;
+}
+.main .picture {
+  width: 100%;
+  height: 429px;
+  background: null;
+  margin: 0 auto;
+}
+.main .picture p img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.main .sheet {
+  width: 100%;
+  height: 500px;
+  background: null;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  display: none;
+  display: flex;
+  flex-direction: column;
+}
+.main .sheet ul {
+  width: 100%;
+  height: 7%;
+  background: null;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+.main .sheet ul li {
+  flex: 1;
+  border-bottom: 1px solid #515151;
+  border-left: 1px solid #515151;
+  color: #f00;
+  font-size: 14px;
+  text-align: center;
+  line-height: 60px;
+}
+.main .sheet h2 {
+  font-size: 18px;
+  text-align: center;
+  line-height: 120px;
+  height: 14%;
+  color: #f00;
+}
